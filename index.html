@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Theophile Thiery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="description" content="Personal academic website of Theophile Thiery showcasing research, publications, and achievements"/>
+<meta name="keywords" content="academic profile, research, publications, GitHub Pages, Approximation Algorithms, Combinatorial Optimization, Independence Systems">
+<meta charset="utf-8"/>
+
+<!-- Enables Latex Support -->
+<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+<!--  -->
+
+<!-- Definition of Different Classes ex:author, conference title etc..., -->
+<style type="text/css">
+	h1 {color: #3a66a3}
+    a{ text-decoration:none; }
+    a:link{color:#0E547F; text-decoration:underline;}
+    a:hover{text-decoration:underline;}
+	 a:title{color: #3a66a3;}
+
+    p.ex { height:auto; }
+    .alignleft { float: left; }
+    .alignright { float: right; }
+    hr { width:800px; }
+
+    h3 {font-size: large;}
+
+    body{
+	line-height: 1.5;
+	padding: 4em 1em;
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 1em;
+	font-family: "Helvetica", "Arial", sans-serif;
+    }
+
+  author{color: #38761d;}
+  conference { font-weight: bold; }
+  ptitle {
+		color: #3a66a3;
+		font-weight: bolder;
+  }
+  thesis{
+    color: #fedc00;
+    font-weight: bolder;
+  }
+  bptitle {
+		font-weight: bolder;
+  }
+
+  /* Collapsible Button */
+  .collapsible {
+    background-color: var(--body-bg-color);
+    color: var(--body-color);
+    cursor: pointer;
+    padding: 0rem;
+    width: 100%;
+    border: 1px solid var(--table-border-color);
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+    display: flex; /* Align icon and text */
+    align-items: center;
+    justify-content: flex-start; /* Icon on the right */
+    gap: 1rem;        /* Add space between icon and text */
+    flex-wrap: wrap; /* Ensures the text wraps correctly */
+    white-space: normal; /* Allows breaking within the text */
+    transition: background-color 0.3s ease;
+  }
+
+  .collapsible:hover {
+    background-color: var(--table-border-color);
+  }
+
+  .collapsible-text {
+    white-space: normal; /* Ensure text respects line breaks */
+  }
+
+  /* Icon Style */
+  .icon {
+    font-size: 1.4rem;
+    transition: transform 0.4s ease; /* Smooth rotation for toggling */
+  }
+
+  /* Rotate the icon when active */
+  .collapsible.active .icon {
+    transform: rotate(22.5deg); /* Changes "+" to "×" or rotates chevron */
+  }
+
+  /* Content Area (Hidden by Default) */
+  .content {
+    padding: 1rem;
+    width: 90%;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    display: none;
+    overflow: hidden;
+    border-left: 3px solid var(--table-border-color);
+    border-radius: 0 0 5px 5px;
+    background-color: #f9f9f9;
+    margin-bottom: 1rem;
+  }
+
+  .content p {
+    margin: 1rem 0;
+  }
+</style>
+<!-- <meta name="google-site-verification" content="xTMoxPTmN_69F2CX32tUoXYpwacrNhe5C3fEC5Can_4" /> -->
+
+<!-- Script pour le menu déroulant -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const collapsibles = document.querySelectorAll('.collapsible');
+    collapsibles.forEach((button) => {
+      button.addEventListener('click', function () {
+        this.classList.toggle('active');
+        const content = this.nextElementSibling;
+        const icon = this.querySelector('.icon');
+
+        // Toggle content visibility
+        if (content.style.display === 'block') {
+          content.style.display = 'none';
+          icon.textContent = '+'; // Collapse icon
+        } else {
+          content.style.display = 'block';
+          icon.textContent = '×'; // Expand icon
+        }
+      });
+    });
+  });
+</script>
+
+</head>
+
+
+
+<body>
+	<img style="float:right; vertical-align:middle;margin:50px 30px; margin-right:20mm; margin-left:10mm;border: 3px solid black;" src="profile_pic.jpeg" width="320">
+	<h1 style="margin-bottom:0mm;"> Theophile Thiery </h1>
+	<u>Email</u>: <font > theophile (dot) thiery (at) epfl (dot) ch</font>
+  <br>
+  <u> Office</u>: <font face="courier,Arial"> <a "href="https://plan.epfl.ch/?room=%3DINJ%20131&dim_floor=1&lang=fr&dim_lang=fr&tree_groups=centres_nevralgiques_grp%2Cmobilite_acces_grp%2Crestauration_et_commerces_grp%2Censeignement%2Cservices_campus_grp%2Cequipements_grp&tree_group_layers_centres_nevralgiques_grp=&tree_group_layers_mobilite_acces_grp=metro&tree_group_layers_restauration_et_commerces_grp=&tree_group_layers_enseignement=guichet_etudiants&tree_group_layers_services_campus_grp=information_epfl&tree_group_layers_equipements_grp=&baselayer_ref=grp_backgrounds&map_x=2532849&map_y=1152263&map_zoom=15">INJ 131</a></font>
+  <br>
+  <em>Don't hesitate to reach out!</em>
+	<br>
+
+	<p style="width: 600px">
+	I am a postdoc in the <a href="https://theory.epfl.ch/">Theory Group</a> at <a href="https://www.epfl.ch/">EPFL</a> hosted by
+  <author><a href="https://theory.epfl.ch/osven/" style="color: #38761d">Ola Svensson</a></author>.
+  I obtained my Ph.D. at <a href="https://www.qmul.ac.uk/maths">Queen Mary University of London</a> under the supervision of
+  <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>. <a href="CV.pdf" target="_blank">Here</a> is my CV.
+  </p>
+
+<p style="width: 600px">
+  I work in combinatorial optimisation, and approximation algorithms. I am interested in these topics and more broadly in theoretical computer sciences. I am found of <em> maximization problems over independence systems</em>. This includes among others: $k$-Set Packing, Submodular Function Maximization, Matroid Intersection, and Matching. I am always interested in connecting theory and practice and happy to discuss research.
+</p>
+
+<p style="width: 600px">
+  Outside academia, I spent 6 months at <a href="https://www.zib.de/">Zuse Institute Berlin</a> working on <a href= "https://www.scipopt.org/">SCIP</a>, an open-source solver for mixed integer programming problems and 6 months at <a href="https://www.epfl.ch/labs/transp-or/research/">TRANSP-OR</a>.
+</p>
+<p style="width: 600px">
+  When I am not doing research you can find me playing Ultimate Frisbee with <a href="https://www.flyhigh.ultimate.ch/">FlyHigh Lausanne</a>.
+</p>
+
+<center>
+  <p style="font-size: 1.2em;vertical-align:middle;margin-right:0mm">
+    <b>I am on the job market from Fall 2025!</b>
+  </p>
+</center>
+
+
+
+<!-- <hr>
+
+<h3> Teaching: </h3>
+
+<p>
+<b>Winter 2024: </b> (0874) Algorithms for Optimization and Inference [<a href="https://blackboard.unibocconi.it" style="color: #38761d ">Blackboard</a>]
+</p>
+
+<p>
+	Office hours: by appointment.
+</p> -->
+
+
+<hr style="height: 1px; width: 90%; background-color: black;">
+<h3> Publications: </h3>
+
+  <!----------------- Article 6 --------------------->
+  <!----------------- --------- --------------------->
+  <div class="collapsible-container">
+    <!-- Collapsible Button with Icon -->
+    <button class="collapsible">
+      <span class="icon">+</span>
+        <span class="collapsible-text">
+            <ptitle>
+              Better Approximation for Weighted $k$-Matroid Intersection
+            </ptitle>
+              <br>
+              with
+              <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+              <br>
+              <em>Submitted</em>.
+              [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+          </span>
+    </button>
+    <!-- Abstract -->
+    <div class="content">
+      <span class="collapsible-text">
+        We consider the problem of finding an independent set of maximum weight simultaneously contained in $k$ matroids over a common ground set. This $k$-matroid intersection problem appears naturally in many contexts, for example in generalizing graph and hypergraph matching problems. In this paper, we provide a $(k+1)/(2 \ln 2)$-approximation algorithm for the weighted $k$-matroid intersection problem.
+        This is the first improvement over the longstanding $(k-1)$-guarantee of Lee, Sviridenko and Vondrák (2009). Along the way, we also give the first improvement over greedy for the more general weighted matroid $k$-parity problem.
+        <br>
+        Our key innovation lies in a randomized reduction in which we solve almost unweighted instances iteratively. This perspective allows us to use insights from the unweighted problem for which Lee, Sviridenko, and Vondrák have designed a $k/2$-approximation algorithm. We analyze this procedure by constructing refined matroid exchanges and leveraging randomness to avoid bad local minima.
+      </span>
+    </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Article 5 --------------------->
+  <!----------------- --------- --------------------->
+    <!-- Collapsible Button with Icon -->
+    <button class="collapsible">
+      <span class="icon">+</span>
+        <span class="collapsible-text">
+            <ptitle>
+              Asymptotically Optimal Hardness for $k$-Set Packing and $k$-Matroid Intersection
+            </ptitle>
+            <br>
+            with
+            <author><a href="https://web.eecs.umich.edu/~euiwoong/" style="color: #38761d ">Euiwoong Lee</a></author>,
+            and
+            <author><a href="https://theory.epfl.ch/osven/" style="color: #38761d">Ola Svensson</a></author>.
+            <br>
+            <em>Submitted</em>.
+            [<a href="https://arxiv.org/pdf/2409.17831" style="color: #38761d ">arXiv</a>]
+          </span>
+    </button>
+    <!-- Abstract -->
+    <div class="content">
+      <span class="collapsible-text">
+        For any $\varepsilon \geq 0$, we prove that $k$-Dimensional Matching is hard to approximate within a factor of $k/(12 + \varepsilon)$ for large $k$ unless  $NP \subseteq BPP$. Listed in Karp's 21 $NP$-complete problems, $k$-Dimensional Matching is a benchmark computational complexity problem which we find as a special case of many constrained optimization problems over independence systems including: $k$-Set Packing, $k$-Matroid Intersection, and Matroid $k$-Parity.
+        <br>
+        For all the aforementioned problems, the best known lower bound was a $\Omega(k / \ln (k))$-hardness by Hazan, Safra, and Schwartz. In contrast, state-of-the-art algorithms achieved an approximation of $O(k)$.
+        Our result narrows down this gap to a constant and thus provides a rationale for the observed algorithmic difficulties. The crux of our result hinges on a novel approximation preserving gadget from $R$-degree bounded $k$-CSPs over alphabet size $R$ to $kR$-Dimensional Matching. Along the way, we prove that $R$-degree bounded $k$-CSPs over alphabet size $R$ are hard to approximate within a factor $\Omega_k(R)$ using known randomised sparsification methods for CSPs.
+      </span>
+    </div>
+    <!----------------- --------- --------------------->
+    <!----------------- --------- --------------------->
+
+  <!----------------- Article 4 --------------------->
+  <!----------------- --------- --------------------->
+    <button class="collapsible">
+      <span class="icon">+</span>
+        <span class="collapsible-text">
+          <ptitle>
+            Approximation Algorithms for Independence Systems
+          </ptitle>
+          <br>
+          <conference>Ph.D. Thesis</conference>.
+          [<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/90376" style="color: #38761d ">Link</a>]
+        </span>
+    </button>
+    <!-- Abstract -->
+    <div class="content">
+      <span class="collapsible-text">
+        In this thesis, we study three maximization problems over independence systems:
+        <br>
+        <br>
+        • Weighted $k$-Set Packing is a fundamental combinatorial optimization problem that captures matching problems in graphs and hypergraphs. For over 20 years Berman’s algorithm stood as the state-of-the-art approximation algorithm for this problem, until Neuwohner’s recent improvements. Our focus is on the value $k = 3$ which is well motivated from theory and practice, and for which improvements are arguably the hardest. We largely improve upon her approximation, by giving an algorithm that yields state-of-the-art results. Our techniques are simple and naturally expand upon Berman’s analysis. Our analysis holds for any value of $k$ with greater improvements over Berman’s result as k grows.
+        <br>
+        <br>
+        • Chapter 3 – We continue the study of the weighted $k$-set packing problem. Building on Chapter 2, we reach the tightest approximation factor possible for $k = 3$, and $k \geq 7$  using our techniques. As a consequence, we improve over all the results in Chapter 2. In particular, we obtain $\sqrt{3}$, and $k/2$-approximation for $k = 3$   and $k \geq 7$ respectively. Our result for $k \geq 7$ is in fact analogous to that of Hurkens and Schrijver who obtained the same approximation factor for the unweighted problem.
+        <br>
+        <br>
+        • Chapter 4 – We present improved multipass streaming algorithms for maximizing monotone and arbitrary submodular functions over independence systems. Our result demonstrates that the simple local-search algorithm for maximizing a monotone submodular function can be efficiently simulated using a few passes over the dataset. Our results improve the number of passes needed compared to the state-of-the-art.
+        <br>
+        <br>
+        • Chapter 5 – We conclude the thesis by presenting improved approximation algorithms for Sparse Least-Square Estimation, Bayesian A-optimal Design, and Column Subset Selection over a matroid constraint. At the heart of this chapter is the demonstration of a new property that considered applications satisfy. We call it: $\beta$-weak submodularity. We leverage this property to derive new algorithms with strengthened guarantees. The notion of $\beta$-weak submodularity is of independent interest and we believe that it will have further use in machine learning and statistics.
+      </span>
+    </div>
+    <!----------------- --------- --------------------->
+    <!----------------- --------- --------------------->
+
+  <!----------------- Weighted k-Set Packing --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+        <ptitle>
+          An Improved Approximation for Maximum Weighted $k$-Set Packing
+	      </ptitle>
+        <br>
+        with
+	      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+        <br>
+	      <conference>SODA 2023</conference>.
+        [<a href="https://doi.org/10.1137/1.9781611977554.ch42" style="color: #38761d ">Conf</a>,
+        <a href="https://arxiv.org/abs/2301.07537" style="color: #38761d ">arXiv</a>]
+      </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We consider the weighted $k$-set packing problem, in which we are given a collection of weighted sets, each with at most $k$ elements and must return a collection of pairwise disjoint sets with maximum total weight. For $k = 3$, this problem generalizes the classical $3$-dimensional matching problem listed as one of the Karp's original 21 $NP$-complete problems. We give an algorithm attaining an approximation factor of $1.786$ for $3$-Set Packing, improving on the recent best result of due to Neuwohner.
+
+      Our algorithm is based on the local search procedure of Berman that attempts to improve the sum of squared weights rather than the problem's objective. When using exchanges of size at most $k$, this algorithm attains an approximation factor of. Using exchanges of size $k^2(k - 1) + k$, we provide a relatively simple analysis to obtain an approximation factor of $1.811$ when $k = 3$. We then show that the tools we develop can be adapted to larger exchanges of size $2 k^2(k - 1) + k$ to give an approximation factor of $1.786$. Although our primary focus is on the case $k = 3$, our approach in fact gives slightly stronger improvements on the factor for all $k > 3$. As in previous works, our guarantees hold also for the more general problem of finding a maximum weight independent set in a $(k+1)$-claw free graph.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Article 2 --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+          <ptitle>
+            Two-Sided Weak Submodularity for Matroid Constrained Optimization and Regression
+          </ptitle>
+          <br>
+          with
+          <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+          <br>
+          <conference>COLT 2022</conference>.
+          [<a href="https://proceedings.mlr.press/v178/thiery22a.html" style="color: #38761d ">Conf</a>,
+          <a href="https://arxiv.org/abs/2102.09644" style="color: #38761d ">arXiv</a>]
+      </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We study the following problem: Given a variable of interest, we would like to find a best linear predictor for it by choosing a subset of $k$ relevant variables obeying a matroid constraint. This problem is a natural generalization of subset selection problems where it is necessary to spread observations amongst multiple different classes. We derive new, strengthened guarantees for this problem by improving the analysis of the residual random greedy algorithm and by developing a novel distorted local-search algorithm.
+      <br>
+      To quantify our approximation guarantees, we refine the definition of weak submodularity by Das and Kempe (2011) and introduce the notion of an upper submodularity ratio, which we connect to the minimum $k$-sparse eigenvalue of the covariance matrix. More generally, we look at the problem of maximizing a set function $f$ with lower and upper submodularity ratio $\gamma$ and $\beta$ under a matroid constraint. For this problem, our algorithms have asymptotic approximation guarantee $1/2$ and $1 - 1/e$ as the function is closer to being submodular. As a second application, we show that the Bayesian A-optimal design objective falls into our framework, leading to new guarantees for this problem as well.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+
+  <!----------------- Multipass for Submodular Function Maximization --------------------->
+  <!----------------- --------- --------------------->
+  <button class="collapsible">
+    <span class="icon">+</span>
+      <span class="collapsible-text">
+        <ptitle>
+          Improved Multi-Pass Streaming Algorithms for Submodular Maximization with Matroid Constraints
+        </ptitle>
+            <br>
+            with
+            <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>, and
+            <author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien-Chung Huang</a></author>.
+            <br>
+            <conference>APPROX 2020</conference>.
+            [<a href="https://doi.org/10.4230/LIPIcs.APPROX/RANDOM.2020.62" style="color: #38761d ">Conf</a>,
+            <a href="https://arxiv.org/abs/2102.09679" style="color: #38761d ">arXiv</a>]
+      </span>
+  </button>
+  <!-- Abstract -->
+  <div class="content">
+    <span class="collapsible-text">
+      We give improved multi-pass streaming algorithms for the problem of maximizing a monotone or arbitrary non-negative submodular function subject to a general $p$-matchoid constraint in the model in which elements of the ground set arrive one at a time in a stream. The family of constraints we consider generalizes both the intersection of $p$ arbitrary matroid constraints and $p$-uniform hypergraph matching. For monotone submodular functions, our algorithm attains a guarantee of $p+1+\varepsilon$ using $O(p/\varepsilon)$-passes and requires storing only $O(k)$ elements, where $k$ is the maximum size of feasible solution. This immediately gives an $O(1/\varepsilon)$-pass $(2+\varepsilon)$-approximation algorithms for monotone submodular maximization in a matroid and $(3+\varepsilon)$-approximation for monotone submodular matching.
+      <br>
+      Our algorithm is oblivious to the choice $\varepsilon$ and can be stopped after any number of passes, delivering the appropriate guarantee. We extend our techniques to obtain the first multi-pass streaming algorithm for general, non-negative submodular functions subject to a $p$-matchoid constraint with a number of passes independent of the size of the ground set and $k$. We show that a randomized $O(p/\varepsilon)$-pass algorithm storing $O(p^3 k \log(k)/\varepsilon^3)$ elements gives a $(p+1+\gamma + \varepsilon)$-approximation, where $\gamma$ is the guarantee of the best-known offline algorithm for the same problem.
+    </span>
+  </div>
+  <!----------------- --------- --------------------->
+  <!----------------- --------- --------------------->
+</div>
+
+<!-- Teaching And Academic Service -->
+<!-- Reviewing -->
+<!-- Supervision -->
+<!-- Teaching -->
+<hr style="height: 1px; width: 90%; background-color: black;">
+<h3> Teaching & Academic Service: </h3>
+<p>
+  <bptitle>Teaching Assistant: </bptitle>
+  <ul>
+    <li>Queen Mary University of London: Calculus I, Linear Programming and Games </li>
+    <li>EPFL: Analysis I, Advanced Linear Algebra, Discrete Optimization</li>
+  </ul>
+  <bptitle> Supervision: </bptitle>
+  <ul>
+    <li>Konrad Litwiński (EPFL, Master in Computer Science): Master's Thesis, <em> February 2024 - June 2024</em>.</li>
+    <li>Tsz Yin Sin (EPFL, Bachelor in Computer Science): Bachelor's Thesis, <em> September 2024 - January 2025</em>.</li>
+  </ul>
+  <bptitle> Rewieving: </bptitle>
+  IPCO 2024,  STACS 204, ESA 2023, WAOA 2023, APPROX 2023, ICALP 2023, Operations Research Letters, Journal of Combinatorial Optimization
+</p>
+
+<!-- Professional Experience -->
+
+  <!-- <p>
+        <ptitle>
+            Better Approximation for Weighted k-Matroid Intersection
+	      </ptitle>
+	      [<a href="https://arxiv.org/abs/2411.19366" style="color: #38761d ">arXiv</a>]
+            <br>
+            with
+	          <author><a href="https://netabobeta.github.io/" style="color: #38761d ">Neta Singer</a></author>.
+            <br>
+            <em> Submitted </em>
+        </p>
+
+	<p>
+        <ptitle>
+          Asymptotically Optimal Hardness for k-Set Packing and k-Matroid Intersection
+	      </ptitle>
+	      [<a href="https://arxiv.org/pdf/2409.17831" style="color: #38761d ">arXiv</a>]
+        <br>
+        with
+	      <author><a href="https://web.eecs.umich.edu/~euiwoong/" style="color: #38761d ">Euiwoong Lee</a></author>,
+        and
+        <author><a href="https://theory.epfl.ch/osven/" style="color: #38761d">Ola Svensson</a></author>.
+        <br>
+	      <em> Submitted </em>
+  </p>
+
+	<p>
+        <thesis>
+          Approximation Algorithms for Independence Systems
+        </thesis>
+	      [<a href="https://qmro.qmul.ac.uk/xmlui/handle/123456789/90376" style="color: #38761d ">Link</a>]
+        <br>
+        <conference>Ph.D. Thesis</conference>
+  </p>
+
+	<p>
+        <ptitle>
+          An Improved Approximation for Maximum Weighted k-Set Packing
+	      </ptitle>
+	      [<a href="https://doi.org/10.1137/1.9781611977554.ch42" style="color: #38761d ">Conf</a>,
+         <a href="https://arxiv.org/abs/2301.07537" style="color: #38761d ">arXiv</a>]
+        <br>
+        with
+	      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+        <br>
+	      <conference>SODA 2023</conference>.
+  </p>
+
+<p>
+        <ptitle>
+          Two-Sided Weak Submodularity for Matroid Constrained Optimization and Regression
+	      </ptitle>
+            [<a href="https://proceedings.mlr.press/v178/thiery22a.html" style="color: #38761d ">Conf</a>,
+            <a href="https://arxiv.org/abs/2102.09644" style="color: #38761d ">arXiv</a>]
+            <br>
+            with
+    <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>.
+    <br>
+    <conference>COLT 2022</conference>.
+</p>
+
+<p>
+  <ptitle>
+    Improved Multi-Pass Streaming Algorithms for Submodular Maximization with Matroid Constraints
+  </ptitle>
+      [<a href="https://doi.org/10.4230/LIPIcs.APPROX/RANDOM.2020.62" style="color: #38761d ">Conf</a>,
+      <a href="https://arxiv.org/abs/2102.09679" style="color: #38761d ">arXiv</a>]
+      <br>
+      with
+      <author><a href="https://www.qmul.ac.uk/maths/profiles/wardj.html" style="color: #38761d">Justin Ward</a></author>, and
+      <author><a href="https://www.di.ens.fr/~cchuang/" style="color: #38761d">Chien-Chung Huang</a></author>.
+      <br>
+      <conference>APPROX 2020</conference>.
+</p> -->
+
+  </body>
+</html>
