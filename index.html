@@ -226,9 +226,13 @@
     <!-- Abstract -->
     <div class="content">
       <span class="collapsible-text">
-        Given a monotone submodular function, we consider the problem of finding a maximum-valued set in the intersection of $k$ matroids. Our main result is a polynomial time local search based algorithm achieving a $k/2+o(k)$ approximation guarantee. This asymptotically matches the best-known guarantee of $k/2+\epsilon$ in the unweighted setting by Lee, Sviridenko, and Vondrák (2009). Prior to this work, the state-of-the-art was a $\ln(4)k/(1+\ln(2))+o(k)$-approximation algorithm obtained by Feldman and Ward (2026). Our approach extends to Matroid $k$-Parity yielding the same approximation guarantee.
+        In the maximum-weight degree-bounded forest problem, we are given a graph with nonnegative edge weights and a degree upper bound on each vertex. The objective is to find a maximum-weight forest satisfying the degree bounds.
+        We show that this problem admits a simple $2$-approximation via the greedy algorithm. This already improves over the best-known guarantees obtained via a reduction to weighted $3$-matroid parity, and sets a baseline to improve upon.
         <br>
-        In contrast to the weight bucketing approach underlying the recent advances of Singer and Thiery (2025) and Feldman and Ward (2026), our algorithm processes elements greedily in decreasing order of marginal value and searches for sufficiently profitable swaps, whose gain exceeds a parameter $\alpha$ given as a function of $k$. We further combine this idea with the weight bucketing approach to obtain improved guarantees for weighted $k$-Set Packing. Our second main result is a $ln(4)k/3+o(k)$-approximation algorithm for weighted $k$-Set Packing, improving on the state of the art $k/2.00561+O(1)$-approximation by Neuwohner (2023).
+
+        Our main result is an $\sfrac{8}{5}$-approximation algorithm for the maximum-weight degree-bounded forest problem. For the special case of uniform degree bounds, our algorithm achieves an approximation ratio of $\sfrac{3}{2}$.
+        It computes two sets of edges, each of which we then restrict to a feasible solution in an optimal way, and finally returns the better of the two resulting solutions.
+        To obtain the initial two edge sets, we first relax the degree bounds and leverage an algorithm by Lau and Singh [JACM'15] for degree-bounded spanning trees, and second we relax the forest constraints and employ an algorithm for maximum-weight $b$-matchings.
       </span>
     </div>
   <!----------------- --------- --------------------->
